@@ -1,0 +1,12 @@
+subject = "Contact Us Inquiry"
+description = "Contact Us Inquiry"
+==
+Hello,
+
+**Name:** {{ name }}
+
+**Email:** {{ email }}
+
+**Phone:** {{ phone }}
+
+**Message:** {{ (contact_message ) ? contact_message|nl2br : ' --- ' }}

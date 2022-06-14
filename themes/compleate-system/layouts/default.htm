@@ -1,0 +1,84 @@
+[SeoCmsPage]
+==
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    {% component 'SeoCmsPage' %}
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{{ 'assets/css/bootstrap.min.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/animate.min.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/custom-animation.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/fontawesome.min.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/meanmenu.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/flaticon.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/venobox.min.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/backToTop.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/slick.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/swiper-bundle.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/default.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/main.css'|theme }}">
+</head>
+
+<body>
+
+
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- preloader end  -->
+
+    <!-- back to top start -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- back to top end -->
+
+    {# header #}
+    {% partial 'header' %}
+
+    <main>
+        {% page %}
+    </main>
+
+    {# footer #}
+    {% partial 'footer' %}
+
+
+    <script src="{{ 'assets/js/vendor/jquery.min.js'|theme }}"></script>
+    <script src="{{ 'assets/js/bootstrap.bundle.min.js'|theme }}"></script>
+    <script src="{{ 'assets/js/isotope.pkgd.min.js'|theme }}"></script>
+    <script src="{{ 'assets/js/slick.min.js'|theme }}"></script>
+    <script src="{{ 'assets/js/swiper-bundle.js'|theme }}"></script>
+    <script src="{{ 'assets/js/venobox.min.js'|theme }}"></script>
+    <script src="{{ 'assets/js/backToTop.js'|theme }}"></script>
+    <script src="{{ 'assets/js/jquery.meanmenu.min.js'|theme }}"></script>
+    <script src="{{ 'assets/js/imagesloaded.pkgd.min.js'|theme }}"></script>
+    <script src="{{ 'assets/js/wow.min.js'|theme }}"></script>
+    <script src="{{ 'assets/js/main.js'|theme }}"></script>
+    <script src="{{ 'assets/js/script.js'|theme }}"></script>
+    {% framework extras %}
+    {% flash %}
+        <script>
+            // only execute once the DOM is loaded
+            document.addEventListener("DOMContentLoaded", function () {
+                $.oc.flashMsg({text: '{{ message }}', 'class': '{{ type }}', 'interval': 10})
+            }, false);
+        </script>
+    {% endflash %}
+    {% scripts %}
+</body>
+
+
+</html>

@@ -1,0 +1,6 @@
+plugin:
+    name: 'wyffy.compleatesystem::lang.plugin.name'
+    description: 'wyffy.compleatesystem::lang.plugin.description'
+    author: Wyffy
+    icon: oc-icon-adjust
+    homepage: ''
